@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+management:
+  server:
+    port: 8082
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    name: bootdb
+    url: jdbc:mysql://localhost:3306/bootdb
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+
+stock-manager:
+  baseUrl: http://localhost:8080

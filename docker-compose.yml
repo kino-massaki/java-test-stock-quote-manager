@@ -1,0 +1,15 @@
+version: "3"
+services:
+    mysql:
+        image: mysql:8
+        pull_policy: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: bootdb
+        ports:
+            - "3306:3306"
+            - "33060:33060"
+    stock-manager:
+        image: lucasvilela/stock-manager
+        ports:
+            - "8080:8080"
